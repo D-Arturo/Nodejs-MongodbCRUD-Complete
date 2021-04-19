@@ -1,0 +1,22 @@
+{{!-- este error viene del controlador signin (usuario no registrado, o contraseña incorrecta) --}}
+{{#if error}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{error}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/if}}
+
+
+
+
+{{!-- este errors viene del controlador signup (menos de 4 caracteres o no coinciden las contraseñas) --}}
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/each}}
